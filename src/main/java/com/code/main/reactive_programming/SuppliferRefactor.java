@@ -10,6 +10,7 @@ public class SuppliferRefactor {
     public static void main(String[] args) {
 
         getName()
+                // here Schedulers.bundedElastic() do as async operation
                 .subscribeOn(Schedulers.boundedElastic()).subscribe(Util.onNext());
         getName();
     }
